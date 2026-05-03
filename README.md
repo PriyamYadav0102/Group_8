@@ -1,95 +1,162 @@
-AI-Based Spam Email Detection System
-Project Overview
+# 📧 Email Spam Detection System
 
-This project implements a hybrid spam email detection system developed as part of the AI Systems Engineering (CMP-L044) module. The system combines rule-based filtering, classical machine learning, and transformer-based models to classify emails as Spam or Not Spam.
+A machine learning-based system to classify emails as **spam or not spam** using traditional models, rule-based filtering, and transformer-based NLP.
 
-The aim is to design a system that is accurate, robust, computationally efficient, scalable, and adaptable to evolving spam patterns such as concept drift and adversarial behaviour.
+---
 
-Features
+## 📌 Overview
 
-The system includes the following components:
+This project builds a **hybrid spam detection system** combining:
 
-Text preprocessing and cleaning pipeline
-TF-IDF feature extraction
-Baseline models including Naive Bayes and Logistic Regression
-Cross-validation and evaluation metrics
-Hybrid rule-based and machine learning classification
-Transformer-based model using DistilBERT
-Visual analysis including text length distribution and word clouds
-Final prediction system that outputs Spam or Not Spam
-Exportable prediction results in CSV format
-System Architecture
+* Classical machine learning models
+* Rule-based keyword filtering
+* Transformer-based deep learning (DistilBERT)
 
-The system follows a multi-stage hybrid pipeline:
+The goal is to improve classification accuracy and demonstrate different approaches to text classification.
 
-Data Ingestion
-The system accepts a CSV dataset with flexible schema handling.
-Preprocessing
-Text is cleaned through lowercasing, removal of punctuation, and normalization.
-Feature Engineering
-TF-IDF vectorization is applied to transform text into numerical features.
-Classification Layer
-A rule-based filter identifies obvious spam messages.
-A Logistic Regression model performs primary classification.
-A transformer model (DistilBERT) captures contextual meaning for complex cases.
-Decision Logic
-The final classification combines outputs from all components to produce a single decision.
-Output
-The system outputs a final prediction of Spam or Not Spam and can export results.
-Evaluation Metrics
+---
 
-The system is evaluated using standard classification metrics:
+## 👥 Team Members
 
-Accuracy
-Precision
-Recall
-F1 Score
-ROC AUC
-Confusion Matrix
+* Dev Modi
+* Roshan Pattharwala
+* Priyam Yadav
+---
 
-Cross-validation is used to ensure robustness and reliability of results.
+## 🧠 Features
 
-Dataset
+* Exploratory Data Analysis (EDA) with visualizations
+* Text preprocessing and cleaning
+* Machine Learning models:
 
-The dataset used is a spam email dataset in CSV format containing labeled messages classified as Spam or Not Spam.
+  * Naive Bayes
+  * Logistic Regression
+* Cross-validation for model evaluation
+* Hybrid rule-based spam filtering
+* Transformer-based classification using DistilBERT
+* Performance comparison of models
+---
 
-The system is designed to automatically adapt to different dataset structures by detecting relevant columns dynamically.
+## 📂 Project Structure
 
-Installation and Setup
+```
+project/
+│
+├── notebooks/
+│   └── email_spam.ipynb     # Main notebook
+├── data/                    # Dataset (if included)
+├── outputs/                 # Results & visualizations
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/spam-detection.git
-
-cd spam-detection
+```
+git clone https://github.com/your-username/email-spam-detection.git
+cd email-spam-detection
+```
 
 Install dependencies:
 
+```
 pip install -r requirements.txt
+```
 
-Run the notebook:
+Or install manually:
 
-jupyter notebook spam_detection.ipynb
+```
+pip install pandas numpy matplotlib seaborn scikit-learn transformers datasets wordcloud
+```
 
-How to Run
-Upload the dataset when prompted in the notebook.
-Execute all cells sequentially.
-View outputs including model performance, visualisations, and predictions.
-Example Prediction
+---
 
-predict_email("Congratulations! You have won a free prize!")
+## ▶️ Usage
 
-Output:
-Spam
+Run the notebook using Jupyter:
 
-Output
+```
+jupyter notebook
+```
 
-The system generates a file named:
+Then open:
 
-final_spam_predictions.csv
+```
+notebooks/email_spam.ipynb
+```
 
-This file contains:
+Upload your dataset when prompted.
 
-Email text
-Actual label
-Predicted label
+---
+
+## 📊 Models Used
+
+### 🔹 Traditional Models
+
+* Naive Bayes (TF-IDF)
+* Logistic Regression
+
+### 🔹 Hybrid Approach
+
+* Keyword-based spam filtering (e.g., "free", "win", "urgent")
+
+### 🔹 Deep Learning
+
+* DistilBERT transformer model via Hugging Face
+
+---
+
+## 📈 Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Cross-validation scores
+
+---
+
+## 🧪 Example Output
+
+The system:
+
+* Classifies random emails
+* Compares model predictions
+* Shows performance metrics
+
+---
+
+## 🚧 Limitations
+
+* Requires dataset upload manually
+* Transformer model may be slower
+* Rule-based system is simplistic
+
+---
+
+## 🔮 Future Improvements
+
+* Deploy as a web app (Flask/Streamlit)
+* Use larger datasets
+* Fine-tune transformer model
+* Real-time spam detection
+
+---
+
+## 📜 License
+
+This project is for academic purposes.
+
+---
+
+## 🙌 Acknowledgements
+
+* Hugging Face Transformers
+* Scikit-learn
+* Dataset source (add yours, e.g., Kaggle)
+
+---
