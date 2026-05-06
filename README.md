@@ -20,7 +20,7 @@ The goal is to improve classification accuracy and demonstrate different approac
 
 * Dev Modi
 * Roshan Pattharwala
-* Priyam yadav
+* Priyam Yadav
 ---
 
 ## 🧠 Features
