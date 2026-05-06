@@ -57,8 +57,7 @@ project/
 Clone the repository:
 
 ```
-git clone https://github.com/your-username/email-spam-detection.git
-cd email-spam-detection
+https://github.com/PriyamYadav0102/Group_8.git
 ```
 
 Install dependencies:
